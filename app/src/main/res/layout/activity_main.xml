@@ -7,12 +7,32 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/memoView"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="@string/memo_view"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <EditText
+        android:id="@+id/memoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/memo_text"
+        app:layout_constraintStart_toStartOf="@+id/memoView"
+        app:layout_constraintTop_toBottomOf="@+id/memoView" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/save_button"
+        app:layout_constraintStart_toStartOf="@+id/memoText"
+        app:layout_constraintTop_toBottomOf="@+id/memoText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
