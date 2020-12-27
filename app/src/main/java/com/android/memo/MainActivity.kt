@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
 
             val newMemo = Memo(0,memoText.text.toString())
             memoDao.insert(newMemo)
-            memoView.text = memoText.text
+
+            val memoList = memoDao.getAll()
+            memoView.text = memoList[memoList.size-1].text
 
         }
     }
