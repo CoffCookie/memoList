@@ -6,32 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/memoView"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:text="@string/memo_view"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="64dp" />
-
     <EditText
         android:id="@+id/memoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="270dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine|textPersonName"
         android:text="@string/memo_text"
-        app:layout_constraintStart_toStartOf="@+id/memoView"
-        app:layout_constraintTop_toBottomOf="@+id/memoView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="@string/save_button"
+        app:layout_constraintBottom_toBottomOf="@+id/memoText"
+        app:layout_constraintStart_toEndOf="@+id/memoText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="321dp"
+        android:layout_height="407dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/memoText"
         app:layout_constraintTop_toBottomOf="@+id/memoText" />
 
